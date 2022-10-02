@@ -19,4 +19,10 @@ Print messages:
 "First record of texts, <incoming number> texts <answering number> at time <time>"
 "Last record of calls, <incoming number> calls <answering number> at time <time>, lasting <during> seconds"
 """
+# Two array accesses
+firstText = texts[0]
+lastCall = calls[-1]
 
+# Three plus four array accesses
+print(f'First record of texts, {firstText[0]} texts {firstText[1]} at time {firstText[2]}')
+print(f'Last record of calls, {lastCall[0]} calls {lastCall[1]} at time {lastCall[2]}, lasting {lastCall[3]} seconds')

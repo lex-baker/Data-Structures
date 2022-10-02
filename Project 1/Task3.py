@@ -44,3 +44,30 @@ Print the answer as a part of a message::
 to other fixed lines in Bangalore."
 The percentage should have 2 decimal digits
 """
+calledCodes = []
+total = 0
+internal = 0
+
+# N accesses
+for call in calls:
+  if call[0][:5] == "(080)":
+    total += 1
+    if call[1][:5] == "(080)": 
+      internal += 1
+    # N accesses
+    if call[1][:1] == "(" and call[1][:call[1].find(")") + 1] not in calledCodes:
+      calledCodes += [ call[1][:call[1].find(")") + 1] ]
+    # N accesses
+    elif call[1][5:6] == " " and call[1][:4] not in calledCodes:
+      calledCodes += [ call[1][:4] ]
+    # N accesses
+    elif call[1][:3] == "140" and call[1][:3] not in calledCodes:
+      calledCodes += [ call[1][:3] ]
+
+print("The numbers called by people in Bangalore have codes:")
+# N log N
+calledCodes.sort()
+for code in calledCodes:
+  print(code)
+
+print(f"{round((internal / total) * 100, 2)} percent of calls from fixed lines in Bangalore are calls to other fixed lines in Bangalore.")

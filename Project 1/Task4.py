@@ -25,3 +25,30 @@ Print a message:
 The list of numbers should be print out one per line in lexicographic order with no duplicates.
 """
 
+possibles = {}
+# Finding all numbers that made outgoing calls
+# N accesses
+for call in calls:
+    # N accesses
+    if call[0] not in possibles.keys():
+        possibles[ call[0] ] = None
+
+# Removing the numbers that received at least one call
+# N accesses
+for call in calls:
+    # N accesses
+    possibles.pop(call[1], None)
+
+# Removing the numbers that sent or received at least one text
+# N accesses
+for text in texts:
+    # N accesses
+    possibles.pop(text[0], None)
+    # N accesses
+    possibles.pop(text[1], None)
+
+print("These numbers could be telemarketers: ")
+# N log N accesses
+possibles = sorted(list(possibles.keys()))
+for possible in possibles:
+    print(possible)

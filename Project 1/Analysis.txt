@@ -1,0 +1,29 @@
+Not sure if I completely grasped O(N) notation but here's my best shot-
+
+Formatting:
+= {More Specific O() Notation} ~ {General O() Notation}
+
+Task0 Worst-Case Big-O Notation:
+
+    Accessed at specific, unchanging index
+    O(0N + (2 + 3 + 4)) = O(9) ~ O(1)
+
+Task1 Worst-Case Big-O Notation:
+
+    Accessed O(N(N + N)) twice
+    O(2(N(2N))) = O(2(2N^2)) = O(4N^2) ~ O(N^2)
+
+Task2 Worst-Case Big-O Notation:
+
+    Accessed O(N(N + N) + N)
+    O(N(N + N) + N) = O(N(2N) + N) = O(2N^2 + N) ~ O(N^2)
+
+Task3 Worst-Case Big-O Notation:
+
+    Accessed O(N(N + N + N) + N(log(N)))
+    O(N(N + N + N) + N(log(N))) = O(N(3N) + N(log(N))) = O(3N^2 + N(log(N))) ~ O(N^2)
+
+Task4 Worst-Case Big-O Notation:
+
+    Accessed O(N(N) + N(N) + N(N + N) + N log N)
+    O(N(N) + N(N) + N(N + N) + N log N) = O(N^2 + N^2 + N(2N) + N log N) = O(4N^2 + N log N) ~ O(N^2)
