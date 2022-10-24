@@ -208,7 +208,7 @@ print ("The content of the encoded data is: {}\n".format(decoded_data)) # The bi
 # and two of them must include edge cases, such as null, empty or very large values
 
 # Test Case 1
-# First result when googling "long story"
+# First result when googling "long story", from The Atlantic
 encoded, tree = huffman_encoding("""I HAVE SOME GOOD news. Next month, The Atlantic will once again send fiction home to our subscribers, in a special supplement that will accompany our May issue. On the newsstand, the supplement will be bound into the May magazine.
 
 The short story has been integral to The Atlantic since our first issue, in 1857, in which we published four stories, including “The Mourning Veil,” by Harriet Beecher Stowe. But as longtime, generously loyal readers know, for the past five years we have published fiction once a year in a special newsstand issue, rather than in any of our 10 subscriber issues. During what has been widely noted to be a “challenging” (read: harrowing) business environment for publishing, this has been a necessary compromise. But none of us has been particularly happy with it, and we have been searching for ways to once again place great fiction in front of all our readers.

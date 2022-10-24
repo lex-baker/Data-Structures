@@ -19,3 +19,9 @@ Time complexity isn't great in the worst-case. Here it is for each function:
 - huffman_encoding(): where n is number of characters in string to encode, O( n * O(i) + O(d) + O(n) ) ~ O( 2n * O(i) ) ~ O( n * O(i) )
 
 - huffman_decoding(): where n is length of string to decode, O( O(n) ) = O(n)
+
+Space complexity: 
+
+- Encoding: where n is number of nodes, O(n)
+
+- Decoding: where n is number of characters, O(n)
