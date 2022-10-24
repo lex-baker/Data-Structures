@@ -1,1 +1,0 @@
-For hashmaps, assume the worst case time complexity for put and get operations to be O(1)
