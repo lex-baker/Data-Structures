@@ -1,3 +1,4 @@
+# Template provided by Udacity
 def bin_search(num, arr):
     # Repeat until only one value remains in the array
     while len(arr) > 1:
