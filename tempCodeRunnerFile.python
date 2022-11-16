@@ -1,8 +1,0 @@
-class hi:
-    def __init__(self):
-        self.gpa = 5
-    def gpa(self):
-        return self.gpa
-
-mine = hi()
-print(mine.gpa, mine.gpa())
