@@ -75,3 +75,4 @@ def test_function(test_case):
 
 test_function([[1, 2, 3, 4, 5], [542, 31]])
 test_function([[4, 6, 2, 5, 9, 8], [964, 852]])
+test_function([[7, 2, 4, 0, 7], [740, 72]])
