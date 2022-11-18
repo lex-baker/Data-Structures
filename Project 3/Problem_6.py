@@ -40,7 +40,7 @@ for n in range(10):
     print ("Pass" if (verified_answer == my_answer) else "Fail")
 
 
-print("\nEdge cases:\n")
+print("\nMy edge cases:\n")
 # Edge cases
 arr = [0]
 print ("Pass" if ((0, 0) == get_min_max(arr)) else "Fail")
