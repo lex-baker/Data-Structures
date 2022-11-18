@@ -49,6 +49,9 @@ def rearrange_digits(input_list):
        (int),(int): Two maximum sums
     """
 
+    if len(input_list) < 2:
+        return None
+
     # O(n * log(n)) worst-case
     input_list = reverse_mergesort(input_list)
 
@@ -65,6 +68,7 @@ def rearrange_digits(input_list):
     return [int(num1), int(num2)]
         
 
+
 def test_function(test_case):
     output = rearrange_digits(test_case[0])
     solution = test_case[1]
@@ -75,4 +79,14 @@ def test_function(test_case):
 
 test_function([[1, 2, 3, 4, 5], [542, 31]])
 test_function([[4, 6, 2, 5, 9, 8], [964, 852]])
+
+
+
+# My tests
+print("\nMy test and edge cases:\n")
+
 test_function([[7, 2, 4, 0, 7], [740, 72]])
+test_function([[1, 2], [2, 1]])
+print("Pass" if (None == rearrange_digits([])) else "Fail") # rearrange_digits should return None if given array is less than two elements
+test_function([[9, 9, 9, 9, 9, 9], [999, 999]])
+test_function([[0, 0, 0, 0, 0, 0], [000, 000]])
