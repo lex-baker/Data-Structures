@@ -41,3 +41,10 @@ def test_function(test_case):
 test_function([0, 0, 2, 2, 2, 1, 1, 1, 2, 0, 2])
 test_function([2, 1, 2, 0, 0, 2, 1, 0, 1, 0, 0, 2, 2, 2, 1, 2, 0, 0, 0, 2, 1, 0, 2, 0, 0, 1])
 test_function([0, 0, 0, 0, 0, 0, 1, 1, 1, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2])
+
+# My tests
+print("\nMy Test and edge cases:\n")
+test_function([2, 1, 0])
+test_function([0])
+test_function([])
+test_function([0, 0, 0])
