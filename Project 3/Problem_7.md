@@ -1,3 +1,3 @@
 # Problem 7
 
-Most of this problem was a repeat from Problem 5, but a bit more challenging since now I was working through the Router wrapper. I enjoyed this problem quite a bit, because it reminded me of the week straight that I had spent configuring a local Nginx server. That definitely helped me understand what was going on here, as a path is just the names of folders you walk through on your way to the file to be served.
+I used a slightly modified Trie class as well as the TrieNode class, which were wrapped into the Router class. Most of this problem was a repeat from Problem 5, but a bit more challenging since now I was working through a wrapper. I enjoyed this problem quite a bit, because it reminded me of the week straight that I had spent configuring a local Nginx server. That definitely helped me understand what was going on here, as a path is just the names of folders you walk through on your way to the file to be served.

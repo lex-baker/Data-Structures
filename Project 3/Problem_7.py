@@ -29,7 +29,6 @@ class RouteTrie:
         # Starting at the root, navigate the Trie to find a match for this path
         # Return the handler for a match, or None for no match
         node = self.root
-        print("paths", paths)
         for path in paths:
             if path in node.children:
                 node = node.children[path]
@@ -121,5 +120,18 @@ print(router.lookup("/home/about")) # should print 'about handler'
 print(router.lookup("/home/about/")) # should print 'about handler' or None if you did not handle trailing slashes
 print(router.lookup("/home/about/me")) # should print 'not found handler' or None if you did not implement one
 
+# My tests
+print("\nMy test and edge cases:\n")
+
 router.add_handler("/home/about/me/", "about me handler")
 print(router.lookup("/home/about/me")) # should print 'about me handler'
+
+print(router.lookup("")) # should print 'root handler'
+# This is because "/" and "" should be the same, because www.example.com/ and www.example.com should bring the user to the same place
+
+router.add_handler("/", "new root handler") # Updating the root handler
+print(router.lookup("/")) # should print 'new root handler'
+
+print(router.lookup("")) # should also print 'new root handler'
+
+print(router.lookup("/does/not/exist")) # should print 'not found handler'
