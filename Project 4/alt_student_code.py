@@ -62,5 +62,16 @@ def shortest_path(m,start,goal):
                     frontier.insert(i, new_path)
                 else:
                     frontier.append(new_path)
-
+        #     print("Current path's:", best_path.path, "f =", best_path.f)
+        #     myprint(frontier)
+        #     print("\n next iter \n")
+        
+        # print("\n\n Finished \n\n")
     return best_path.path
+
+# def myprint(arr):
+#     output = "Frontier:\n"
+#     for mp in arr:
+#         output += str(mp)
+#         output += "\n"
+#     print(output)
