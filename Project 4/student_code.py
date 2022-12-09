@@ -18,7 +18,7 @@ class map_path():
             self.g += self.find_cost(self.get_last(), node)
             
             self.path.append(node)
-        
+
         self.h = self.find_cost(self.get_last(), self.goal)
         self.f = self.g + self.h
 
@@ -30,6 +30,13 @@ class map_path():
     
     def find_cost(self, point_a, point_b):
         # Using this for point and goal gives h, but using this for point and next point gives g
+        # I used euclidean distance heuristic function, as it made the most sense because of the constraints on movement in the map
+        #
+        # I looked into Manhatten distance and Diagonal distance heuristic functions, but both of those assumed there was a range of motion, 
+        # in four or more directions.
+        #
+        # Given that each node only had a single path to each neighbor it had to follow, which was a straight line, and we were given the 
+        # (x, y) coordinates of each node, euclidean distance was the most logical and straight-forward
         return math.sqrt( math.pow(self.m.intersections[point_b][0] - self.m.intersections[point_a][0], 2) + math.pow(self.m.intersections[point_b][1] - self.m.intersections[point_a][1], 2) )
     
     def __str__(self):
